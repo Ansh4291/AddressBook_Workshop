@@ -6,7 +6,7 @@ body {
     margin: 0;
     height: 100%;
     font-family: sans-serif;
-    background-color: #f7f7f7;
+    background-color: #fbf7f7;
 }
 
 .header {
@@ -70,7 +70,7 @@ body {
 
 .form {
     width: 60%;
-    background: #ecd8d8 0% 0% no-repeat padding-box;
+    background: #faf8f8 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #dfbcbc;
     border-radius: 8px;
     opacity: 1;
@@ -105,4 +105,100 @@ body {
     padding-right: 5px;
     height: 30px;
     width: 30px;
+}
+
+.body {
+    padding: 50px 60px;
+}
+
+.row-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 0px solid rgb(89, 243, 89);
+    margin: 0px auto;
+    width: 100%;
+}
+
+.label-city,
+.label-state,
+.label-zip {
+width: calc(50% - 10px);
+}
+
+.label-city,
+.label-state {
+    margin-right: 20px;
+}
+
+.label-text-phone {
+    font-size: 16px;
+    color: #040404;
+    opacity: 1;
+    font-family: sans-serif;
+}
+
+.city,
+.state,
+.zip {
+    font-size: 16px;
+    color: #00070d;
+    opacity: 1;
+    font-family: sans-serif;
+}
+
+.text {
+    font-size: 16px;
+    color: #000305;
+    opacity: 1;
+    font-family: sans-serif;
+}
+
+.error-output {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(241, 7, 7);
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(11, 11, 11);
+    border-radius: 1px;
+    resize: vertical;
+    margin-bottom: 30px;
+    font-family:sans-serif;
+}
+
+.profie-radio-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-radio-content>label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+select {
+    padding: 12px;
+    border: 1px solid#ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent;
+    justify-content: space-between;
+    margin-right: 40px;
+    width: 100%;
+    margin-bottom: 30px;
 }
