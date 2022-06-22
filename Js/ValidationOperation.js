@@ -136,3 +136,12 @@ const createNewAddId = () => {
     localStorage.setItem('AddressBookID', addrId);
     return addrId;
 }
+
+const resetForm = () => {
+    setValue('#name', '');
+    setValue('#phone','');
+    setValue('#address', '');
+    setValue('#city', '');
+    setValue('#state', '');
+    setValue('#zipcode', '');
+}

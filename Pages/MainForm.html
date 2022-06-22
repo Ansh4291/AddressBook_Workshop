@@ -22,11 +22,11 @@
     </header>
 
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event); false" onreset="reset()">
+        <form class="form" action="#" onsubmit="save(event); false" onreset="reset();">
             <div class="form-head">
                 <span class="form-head-text">PERSON ADDRESS FORM</span>
                 <span class="cross-icon">
-                    <img src="/Assets/images/cross.png" class="close-circle" name="close-circle" onclick="cancel();">
+                    <img src="/Assets/images/cross.png" class="close-circle" name="close-circle" onclick="location.href='/Pages/MainForm.html'">
                 </span>
             </div>
             <div class="body">
@@ -42,7 +42,7 @@
 
 
                 <label class="label text" for="address">Address</label><br>&nbsp;
-                <error-output class="address-error"></error-output>&nbsp;
+                <error-output class="address-error"><AddressBookList/error-output>&nbsp;
                 <textarea id="address" class="input" name="address" placeholder="Enter your address here"
                     style="height: 100px; "></textarea>
 
