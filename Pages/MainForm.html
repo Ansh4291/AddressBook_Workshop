@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="/Css/MainForm.css">
-    <title>Document</title>
+    <title>Address Book</title>
 </head>
 
 <body>
@@ -51,10 +51,42 @@
                         <label class="city" for="city">City</label><br>&nbsp;
                         <select id="city" name="city">
                             <option value="0">Select City</option>
-                            <option value="Pune">Pune</option>
-                            <option value="Mumbai">Mumbai</option>
-                            <option value="Nashik">Nashik</option>
-                            <option value="Kolkata">Kolkata</option>
+                            <opti.add-reset {
+                                width: 104%;
+                                height: 10vh;
+                                background: #ffffff;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                padding: 20px 0px 0px 0px;
+                            }
+                            
+                            button {
+                                width: 300px;
+                                height: 50px;
+                                border: none;
+                                outline: none;
+                                background: #D3D3D3;
+                                color: #384135;
+                                font-size: 16px;
+                                border-radius: 15px;
+                                text-align: center;
+                                position: relative;
+                                overflow: hidden;
+                                cursor: pointer;
+                                margin: auto;
+                            }
+                            
+                            button:hover {
+                                color: #3179fd;
+                                border: #3179fd solid 1px;
+                                background: #fff;
+                            }
+                            
+                            .addButton,
+                            .resetButton {
+                                margin-right: 5%;
+                            }on value="Kolkata">Kolkata</option>
                             <option value="Banglore">Banglore</option>
                             <option value="Jaipur">Jaipur</option>
                             <option value="Solapur">Solapur</option>
@@ -78,9 +110,15 @@
                         <label class="zip" for="zipcode">Zipcode</label></br>&nbsp;
                         <error-output class="zip-error"></error-output>&nbsp;
                         <input class="input" type="zipcode" id="zipcode" name="zipcode"></input>
-                        
+
                     </div>
                 </div>
+                <div class="add-reset">
+                    <a href="./Home_Page.html"></a>
+                    <button type="submit" class="addButton" id="addButton">Submit</button>
+                    <button type="reset" class="resetButton" id="resetButton">Reset</button>
+                </div>
+            </div>
         </form>
     </div>
     <script src="/Js/AddressBook.js"></script>
