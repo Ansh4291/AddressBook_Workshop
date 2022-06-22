@@ -44,7 +44,7 @@ function Phonenumber() {
         address.addEventListener('input', function () {
             if (address.value.length == 0) {
                 addressError.textContent = "";
-                return;
+                return; // alert("Added Sucedssfully");
             }
             try {
                 (new AddressBook()).Address = address.value;
@@ -71,4 +71,14 @@ function Zipcode() {
             zipcodeError.textContent = e;
         }
     });
+}
+
+const save = () => {
+    try{
+        // let addressBookData = createAddressBook();
+        alert("In Save Method ");
+        // alert(addressBookData.toString());
+    }catch (e) {
+        return;
+    }
 }

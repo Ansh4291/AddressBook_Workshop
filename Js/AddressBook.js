@@ -39,4 +39,9 @@ class AddressBook{
         if(!ziprgx.test(zipcode))
         throw "Zip Code Is Incorrect!";
     }
+    toString() {
+        return "name=" + this.name + ", Phone No=" + this.phone +
+        ", Address=" + this.address + ", Zip Code=" + this.zipcode +
+        ", City=" + this.city + ", State=" +this.state;
+}
 }
