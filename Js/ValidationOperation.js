@@ -14,8 +14,8 @@ function validateName() {
         }
         try {
             (new AddressBook()).Name = name.value;
-             textError.textContent = "";
-        } catch (e) {      
+            textError.textContent = "";
+        } catch (e) {
             console.error(e);
             textError.textContent = e;
         }
@@ -31,29 +31,29 @@ function Phonenumber() {
         }
         try {
             (new AddressBook()).PhoneNo = phone.value;
-             phoneError.textContent = "";
+            phoneError.textContent = "";
         } catch (e) {
             console.error(e);
             phoneError.textContent = e;
         }
     });
 }
-    function Address() {
-        const address = document.querySelector('#address');
-        const addressError = document.querySelector('.address-error');
-        address.addEventListener('input', function () {
-            if (address.value.length == 0) {
-                addressError.textContent = "";
-                return; // alert("Added Sucedssfully");
-            }
-            try {
-                (new AddressBook()).Address = address.value;
-                addressError.textContent = "";
-            } catch (e) {
-                console.error(e);
-                addressError.textContent = e;
-            }
-        });
+function Address() {
+    const address = document.querySelector('#address');
+    const addressError = document.querySelector('.address-error');
+    address.addEventListener('input', function () {
+        if (address.value.length == 0) {
+            addressError.textContent = "";
+            return; // alert("Added Sucedssfully");
+        }
+        try {
+            (new AddressBook()).Address = address.value;
+            addressError.textContent = "";
+        } catch (e) {
+            console.error(e);
+            addressError.textContent = e;
+        }
+    });
 }
 function Zipcode() {
     const zipcode = document.querySelector('#zipcode');
@@ -74,12 +74,12 @@ function Zipcode() {
 }
 
 const save = () => {
-    try{
+    try {
         let addressBookData = createAddressBook();
         alert("In Save Method ");
         alert(addressBookData.toString());
         createAndUpdateStorage(addressBookData);
-    }catch (e) {
+    } catch (e) {
         return;
     }
 }
@@ -106,8 +106,8 @@ const createAddressBook = () => {
     }
     addressBookData.phone = getInputValueById('#phone');
     addressBookData.address = getInputValueById('#address');
-    addressBookData.city= getInputValueById('#city');
-    addressBookData.state= getInputValueById('#state');
+    addressBookData.city = getInputValueById('#city');
+    addressBookData.state = getInputValueById('#state');
     addressBookData.zipcode = getInputValueById('#zipcode');
     return addressBookData;
 }
@@ -139,7 +139,7 @@ const createNewAddId = () => {
 
 const resetForm = () => {
     setValue('#name', '');
-    setValue('#phone','');
+    setValue('#phone', '');
     setValue('#address', '');
     setValue('#city', '');
     setValue('#state', '');
