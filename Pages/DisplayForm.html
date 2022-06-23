@@ -3,12 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Form</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="/Css/DisplayForm.css">
+    <link rel="stylesheet" media="screen" href="/Css/DisplayForm.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -29,7 +27,25 @@
             <a href="/Pages/MainForm.html" class="add-button">
                 <img src="/Assets/icons/add-24px.svg" alt="">Add User</a>
         </div>
+        <div>
+            <table id="display" class="table">
+                <!-- <!- UC 3 -->
+                <tr> 
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Phone No</th>
+                    <th>Zip Code</th>
+                    <th>Actions</th>
+                    </tr>
+
+            </table>
+        </div>
     </div>
+
+    <script src="/Js/DisplayForm.js"></script>
+    <script src="/Js/ValidationOperation.js"></script>
 </body>
 
 </html>
