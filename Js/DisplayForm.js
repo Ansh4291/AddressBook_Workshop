@@ -25,11 +25,23 @@ const createInnerHtml = () => {
                 <td>${addrPayrollData.phone}</td>
                 <td>${addrPayrollData.zipcode}</td>
                 <td>
-                    <img id="1" onclick="remove(this)" alt="delete" src="/Assets/icons/delete-black-18dp.svg">
+                <img id="${addrPayrollData._id}" onclick="remove(this)" alt="delete" src="/Assets/icons/delete-black-18dp.svg">
                     <img id="1" alt="edit" onclick="update(this)" src="/Assets/icons/create-black-18dp.svg">
                 </td>
             </tr>
         `;
     }
     document.querySelector('#display').innerHTML = innerHtml;
+}
+
+const remove = (node) => {
+    let addrPayrollData = addrPayrollList.find(addData => addData._id == node.id);
+   if(!addrPayrollData) return;
+    const index = addrPayrollList 
+                    .map(addData => addData._id)
+                    .indexOf(addrPayrollData._id);
+                    addrPayrollList.splice(index, 1);
+    localStorage.setItem('AddressBookList', JSON.stringify(addrPayrollList));
+    document.querySelector('.per-count').textContent = addrPayrollList.length;
+    createInnerHtml();
 }
