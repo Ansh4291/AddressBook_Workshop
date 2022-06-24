@@ -1,8 +1,12 @@
+let isUpdate = false;
+let AdderessObj = {};
+
 window.addEventListener('DOMContentLoaded', (event) => {
     validateName();
     Phonenumber();
     Address();
     Zipcode();
+    checkForUpdate();
 });
 function validateName() {
     const name = document.querySelector('#name');
@@ -144,4 +148,34 @@ const resetForm = () => {
     setValue('#city', '');
     setValue('#state', '');
     setValue('#zipcode', '');
+}
+
+const checkForUpdate = () => {
+    const employeePayrollJSON = localStorage.getItem('editAddr');
+    isUpdate = employeePayrollJSON ? true : false;
+    if(!isUpdate) return;
+    AdderessObj = JSON.parse(employeePayrollJSON);
+    setForm();
+}
+
+const setForm = () => {
+    setValue('#name',AdderessObj.name);
+    setValue('#address',AdderessObj.address);
+    setValue('#city',AdderessObj.city);
+    setValue('#state',AdderessObj.state);
+    setValue('#phone',AdderessObj.phone);
+    setValue('#zipcode',AdderessObj.zipcode);
+}
+
+const setTextValue = (id, value) => {
+    const element = document.querySelector(id); element.textContent = value;
+}
+const setValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
+
+const setSelectedIndex = (id, index) => {
+    const element = document.querySelector(id);
+    element.selectedIndex = index;  
 }
